@@ -26,13 +26,17 @@ src="https://www.facebook.com/tr?id=906250568136106&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-Q33DZWQS7D"></script>
+<script defer src="https://www.googletagmanager.com/gtag/js?id=G-Q33DZWQS7D"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-Q33DZWQS7D', { 'anonymize_ip': true });
+  document.addEventListener("DOMContentLoaded", function () {
+      setTimeout(function () {
+          gtag('js', new Date());
+          gtag('config', 'G-Q33DZWQS7D', { 'anonymize_ip': true });
+      }, 2000); // Adia a execução para evitar bloquear a thread principal
+  });
 </script>
 
 <link rel="preload" href="https://scripts.converteai.net/c4327551-93d5-4b51-878b-74bdcdddd74b/ab-test/67aeb6fa9b8b0a6c86fc2883/player.js" as="script">
